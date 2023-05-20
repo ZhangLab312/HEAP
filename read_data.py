@@ -36,11 +36,6 @@ def Get_DNA_Sequence1001(cell,name,length = 1001):
         X_train.append(row)
         pos_num = pos_num + 1
         y_train.append(1)
-        row1 = copy.deepcopy(row)
-        random.shuffle(row1)
-        X_train.append(row1)
-        y_train.append(0)
-        neg_num = neg_num + 1
     for line in neg_file:
         line = line.strip('\n\r').upper()
         if line[0] == ">":
