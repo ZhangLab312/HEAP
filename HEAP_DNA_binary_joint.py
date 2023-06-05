@@ -197,6 +197,7 @@ class HEAP_DNA(nn.Module):
         self.sigmoid = nn.Sigmoid()
         self._init_weights()
         self.flatten = nn.Flatten(start_dim=1)
+        self.fc = nn.Linear(in_features=1001, out_features=2)
 
     def _init_weights(self):
         """Initialize the new built layers"""
